@@ -7,7 +7,7 @@ async function up(knex) {
         table.string('name').notNullable();
         table.string('email').notNullable().unique();
         table.string('password').notNullable();
-        table.timestamps(false, true);
+        table.timestamps(true);
     });
 }
 exports.up = up;
