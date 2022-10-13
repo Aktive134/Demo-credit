@@ -21,7 +21,36 @@ const config: { [key: string]: Knex.Config } = {
     migrations: {
       tableName: "knex_migrations"
     }
-  }
+  },
+  production: {
+    client: "mysql2",
+    connection: {
+      host: configuration.Production.host,
+      port: configuration.Database.port,
+      user: configuration.Production.user,
+      password: configuration.Production.password,
+      database: configuration.Production.database,
+    },
+    migrations: {
+      tableName: "migrations",
+      directory: "../../dist/database/migrations",
+    },
+  },
+
+  test: {
+    client: "mysql2",
+    connection: {
+      database: configuration.dbtest,
+      host: configuration.Database.host,
+      port: configuration.Database.port,
+      user: configuration.Database.user,
+      password: configuration.Database.password
+    },
+    migrations: {
+      tableName: "migrations",
+      directory: "../../dist/database/migrations",
+    },
+  },
 };
 
 export default config
