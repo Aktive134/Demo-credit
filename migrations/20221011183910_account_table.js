@@ -12,7 +12,7 @@ async function up(knex) {
             .onDelete('CASCADE');
         table.string('account_number').notNullable().unique();
         table.double('balance').notNullable();
-        table.timestamps(true, true);
+        table.timestamps(false, true);
     });
 }
 exports.up = up;
