@@ -22,6 +22,7 @@ interface PRODATABASE {
     host: string,
     user: string,
     password: string,
+    port: number
 }
 
 interface IConfig {
@@ -57,7 +58,8 @@ const Configuration: IConfig = {
         database: process.env.PRODUCTION_DATABASE as string,
         host: process.env.PRODUCTION_HOST as string,
         user: process.env.PRODUCTION_USERNAME as string,
-        password: process.env.PRODUCTION_PASSWORD as string
+        password: process.env.PRODUCTION_PASSWORD as string,
+        port: Number(process.env.MYSQL_PORT)
     }
 }
 

@@ -8,11 +8,11 @@ const config: { [key: string]: Knex.Config } = {
   development: {
     client: "mysql2",
     connection: {
-      database: "demo_credit",
-      host: "127.0.0.1",
-      port: 3306,
-      user: "root",
-      password: "Uraynus134"
+      database: configuration.Database.database,
+      host: configuration.Database.host,
+      port: configuration.Database.port,
+      user: configuration.Database.user,
+      password: configuration.Database.password
     },
     pool: {
       min: 2,
@@ -26,7 +26,7 @@ const config: { [key: string]: Knex.Config } = {
     client: "mysql2",
     connection: {
       host: configuration.Production.host,
-      port: configuration.Database.port,
+      port: configuration.Production.port,
       user: configuration.Production.user,
       password: configuration.Production.password,
       database: configuration.Production.database,
