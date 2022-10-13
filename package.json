@@ -16,6 +16,9 @@
     "type": "git",
     "url": "git+https://github.com/Aktive134/Demo-credit.git"
   },
+  "engines": {
+    "node": "16.15.0"
+  },
   "keywords": [],
   "author": "Umukoro Raymond",
   "license": "ISC",
