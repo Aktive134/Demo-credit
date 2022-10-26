@@ -16,7 +16,7 @@ An API that allows users to create a wallet and allows for the following functio
 
 
 - [github repository](https://github.com/Aktive134/Demo-credit)
-- [API URL](https://josh.herokuapp.com/)
+- [API URL](https://wallet-transaction-api.herokuapp.com/)
 
 
 ## Documentation

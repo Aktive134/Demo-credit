@@ -5,7 +5,7 @@ import validateSignupData from "../../middleware/validate-user-signUp"
 
 const { createHandler, loginHandler, logoutHandler } = authController;
 
-const authRouter = Router();
+const authRouter = Router()
 
 authRouter.post("/sign-up", validateSignupData, createHandler);
 authRouter.post("/login", validateLoginData, loginHandler);
